@@ -18,10 +18,13 @@ from pathlib import Path
 import json
 import math
 
-dir_path = Path(os.path.dirname(os.path.realpath(__file__))).parents[2]
-sys.path.append(dir_path.__str__())
+# dir_path = Path(os.path.dirname(os.path.realpath(__file__))).parents[2]
+# sys.path.append(dir_path.__str__())
 
-from third_party.colmap.scripts.python.read_write_model import read_model, qvec2rotmat  # NOQA
+# for google colab uncomment below line and comment above lines
+sys.path.append("/content/neuralangelo/third_party")
+
+from colmap.scripts.python.read_write_model import read_model, qvec2rotmat  # NOQA
 
 
 def find_closest_point(p1, d1, p2, d2):

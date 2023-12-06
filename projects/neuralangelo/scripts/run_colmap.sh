@@ -18,7 +18,7 @@ colmap feature_extractor \
     --SiftExtraction.use_gpu=true \
     --SiftExtraction.num_threads=32
 
-colmap sequential_matcher \
+colmap exhaustive_matcher \
     --database_path=${1}/database.db \
     --SiftMatching.use_gpu=true
 
